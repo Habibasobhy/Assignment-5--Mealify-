@@ -1,0 +1,56 @@
+/* & START DARK MODE */
+
+:root:has(.mode input:checked){
+    --color-default: rgb(255, 255, 255);;
+    --color-primary: rgb(193, 126, 31);
+    --color-secondary: #fff;
+    --color-tertiary: rgb(159, 159, 159);
+    --color-light: rgb(23, 23, 23);
+    --color-contact-h3 : rgb(173, 173, 173);
+    --bg-color-light-grey: rgb(37, 37, 37);
+    --bg-color-grey-contact: #000;
+    --bg-color-default: rgb(32, 32, 32);
+}
+
+body:has(.mode input:checked) ::selection{
+    background-color: #926321;
+}
+
+
+body:not(:has(:target)):has(.mode input:checked) .home-link, 
+body:has(#home:target):has(.mode input:checked) .home-link,
+body:has(#chefs:target):has(.mode input:checked) .chefs-link,
+body:has(#gallery:target):has(.mode input:checked) .gallery-link,
+body:has(#contact:target):has(.mode input:checked) .contact-link{
+    color: #fff;
+}
+
+body:has(.mode input:checked) nav ul li a:hover{
+    color: #fff;
+}
+
+body:has(.mode input:checked) nav .mode .dark-mode{
+    display: block;
+}
+
+body:has(.mode input:checked) nav .mode .light-mode{
+    display: none;
+}
+
+body:has(.mode input:checked) #home .home-header p{
+    color: var(--color-tertiary);
+}
+
+body:has(.mode input:checked) #home .home-header .btn-group a:nth-child(1):hover,
+body:has(.mode input:checked) #contact .form button:hover,
+body:has(.mode input:checked) #footer .row .col-xl-6 .row .col-sm-3 button:hover{
+    background-color: rgb(215, 140, 35);
+}
+
+body:has(.mode input:checked) #chefs .card .chef-content::before{
+    background-image: url('../images/team-shape-dark.svg');
+}
+
+body:has(.mode input:checked) nav ul li.close-icon a i:hover{
+    color: white;
+}
